@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Bluu Next";
+    src: url('../fonts/bluunext.woff2'), url('../fonts/bluunext.woff');
+}
+
+body {
+    font-family: "Bluu Next", 'Times New Roman';
+    font-size: 24px;
+    line-height: 1.25;
+
+    background-color: #edc7a9;
+    background-image: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0));
+    color: #000000;
+    margin: 40px auto 40px auto;
+    width: 620px;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 10vmin;
+}
