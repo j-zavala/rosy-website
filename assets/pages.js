@@ -3,7 +3,27 @@ let pageNumber = 0
 
 // content for these pages
 const pages = [
-    "queens designer", "kanye west", "october", "download my pdf"
+    {
+        content:"a Queens-based graphic designer", 
+        backgroundColor: "",
+        circleColor: ""
+    },
+    {
+        content:"Kanye West biggest fan", 
+        backgroundColor: "",
+        circleColor: ""
+    },
+    {
+        content:"looking for a job at the end of October", 
+        backgroundColor: "",
+        circleColor: ""
+    },
+    {
+        content:`letting you <a href="pdf.pdf">download his PDF</a>`, 
+        backgroundColor: "",
+        circleColor: ""
+    },
+
 ]
 
 // pick the relevant tags
@@ -39,7 +59,7 @@ const prev = function ()
 //Updates content and style according to the page we are on
 const updateSection = function ()
 {
-        outputTag.innerHTML = pages[pageNumber]
+        outputTag.innerHTML = pages[pageNumber].content
 }
 // on click of tag, run corresponding function
 nextTag.addEventListener("click", next)
