@@ -1,5 +1,10 @@
 // this keeps track of which page we are on
-let pageNumber = 0;
+let pageNumber = 0
+
+// content for these pages
+const pages = [
+    "queens designer", "kanye west", "october", "download my pdf"
+]
 
 // pick the relevant tags
 const nextTag = document.querySelector("footer img.next")
@@ -11,9 +16,9 @@ const next = function ()
 {
 	pageNumber = pageNumber + 1
 
-	if (pageNumber > 10)
+	if (pageNumber > pages.length - 1)
 	{
-		pageNumber = 1
+		pageNumber = 0
 	}
 
 	updateSection()
@@ -23,9 +28,9 @@ const next = function ()
 const prev = function ()
 {
 	pageNumber = pageNumber - 1
-	if (pageNumber < 1)
+	if (pageNumber < 0)
 	{
-		pageNumber = 10
+		pageNumber = pages.length - 1
 	}
 
 	updateSection()
@@ -34,7 +39,7 @@ const prev = function ()
 //Updates content and style according to the page we are on
 const updateSection = function ()
 {
-	outputTag.innerHTML = pageNumber
+        outputTag.innerHTML = pages[pageNumber]
 }
 // on click of tag, run corresponding function
 nextTag.addEventListener("click", next)
