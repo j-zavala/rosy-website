@@ -9,7 +9,7 @@ const pages = [
         circle: "#3e78ed"
     },
     {
-        content:"Kanye West's biggest fan", 
+        content:"Johnny Zavala's biggest fan", 
         background: "#a1fffe",
         circle: "#e34a47"
     },
@@ -19,7 +19,7 @@ const pages = [
         circle: "#f7fe00"
     },
     {
-        content:`letting you <a href="pdf.pdf">download his PDF</a>`, 
+        content:`letting you <a href="../images/johnny-resume.pdf">download his PDF</a>`, 
         background: "#faffb8",
         circle: "#b472e6"
     },
