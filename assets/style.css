@@ -35,6 +35,10 @@ section {
     text-align: center;
 }
 
+section a {
+    color: #000000;
+}
+
 section div.circle {
     width: 20px;
     height: 20px;
@@ -59,4 +63,5 @@ footer {
 
 footer img {
     margin: 0 10px 0 10px;
+    cursor: pointer;
 }

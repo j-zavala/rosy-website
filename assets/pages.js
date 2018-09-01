@@ -70,11 +70,31 @@ const random = function () {
 //Updates content and style according to the page we are on
 const updateSection = function ()
 {
-        outputTag.innerHTML = pages[pageNumber].content
-        bodyTag.style.backgroundColor = pages[pageNumber].background
-        circleTag.style.backgroundColor = pages[pageNumber].circle
+    outputTag.innerHTML = pages[pageNumber].content
+    bodyTag.style.backgroundColor = pages[pageNumber].background
+    circleTag.style.backgroundColor = pages[pageNumber].circle
 }
+
+const keyTap = function (e)
+{
+    if ((e.key) === "ArrowLeft")
+    {
+        prev()
+    } 
+    else if ((e.key) === "ArrowRight") 
+    {
+        next()
+    }
+    else if ((e.keyCode || e.which) === 32) 
+    {
+        random()
+    }
+    
+}
+
 // on click of tag, run corresponding function
 nextTag.addEventListener("click", next)
 prevTag.addEventListener("click", prev)
 randomTag.addEventListener("click", random)
+document.addEventListener("keyup", keyTap)
+
